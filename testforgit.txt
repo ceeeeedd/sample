@@ -12,4 +12,4 @@ select isnull(last_name_l,'') + ',' + isnull(first_name_l,'') + ' ' + isnull(mid
 from employee_employment_info_view
 full outer join api_employee_specialty_view  on employee_employment_info_view.person_id = api_employee_specialty_view.employee_id
 where job_title_name_l = 'doctor' and not employee_status_l = 'inactive'
-order by last_name_l desc
+order by last_name_l asc
